@@ -1,0 +1,51 @@
+import { colors } from '@/Styles/colors';
+import { AntDesign, Ionicons, MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
+import FontAwesome from '@expo/vector-icons/FontAwesome';
+import { Tabs } from 'expo-router';
+
+
+export default function TabLayout() {
+  return (
+    <Tabs screenOptions={{ tabBarActiveTintColor: colors.primary,
+                           headerShown: false
+                           }}>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Início',
+          tabBarIcon: ({ color }) => <Ionicons size={28} name="home" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="discipline"
+        options={{
+          title: 'Disciplinas',
+          tabBarIcon: ({ color }) => <AntDesign size={24} name="book" color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="activity"
+        options={{
+          title: 'Atividade',
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons size={28}
+                                     name="clipboard-text-outline" color={color} />,
+        }}
+      />
+
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Perfil',
+          tabBarIcon: ({ color }) => <MaterialIcons size={32} 
+                        name="person-outline" color={color} />,
+        }}
+      />
+
+
+    </Tabs>
+    
+    
+    
+  );
+}
