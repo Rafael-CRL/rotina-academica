@@ -29,6 +29,16 @@ export const styles = StyleSheet.create({
         color: colors.secondary,
     },
 
+    cardContent:{
+      flexDirection: "row",
+      gap:16,
+      paddingTop: 24,
+    },
+
+    card:{
+      flex: 1,
+    },
+
     content: {
         paddingTop:Platform.OS === "android" ? 54 : 64, 
         paddingHorizontal: 24,
