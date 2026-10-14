@@ -6,6 +6,8 @@ import { withOpacity } from "@/utils/color";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  keyboard: { flex: 1 },
+
   content: {
     gap: 32,
     paddingHorizontal: 20,
@@ -48,6 +50,6 @@ export const styles = StyleSheet.create({
   saveText: {
     color: colors.white,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
 });

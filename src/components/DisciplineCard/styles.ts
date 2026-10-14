@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -28,22 +29,8 @@ export const styles = StyleSheet.create({
   name: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 14,
+    fontSize: textSize.heading,
   },
-
-  badge: {
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 999,
-  },
-
-  badgePending: { backgroundColor: colors.background.red },
-  badgeDone: { backgroundColor: colors.background.green },
-
-  badgeText: { fontFamily: fontFamily.semibold, fontSize: 12 },
-
-  badgeTextPending: { color: colors.red },
-  badgeTextDone: { color: colors.green },
 
   // Ícone de pessoa e nome do professor lado a lado.
   profRow: {
@@ -55,7 +42,7 @@ export const styles = StyleSheet.create({
   prof: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 
   // Linha fina que separa o topo do cartão das informações.
@@ -92,11 +79,11 @@ export const styles = StyleSheet.create({
   infoLabel: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
   infoValue: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 });

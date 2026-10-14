@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 // Estilos da barra de abas: fundo branco, linha no topo e cantos de cima arredondados.
@@ -15,7 +16,7 @@ export const styles = StyleSheet.create({
   },
   tabLabel: {
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
     letterSpacing: 0.5,
   },
 });

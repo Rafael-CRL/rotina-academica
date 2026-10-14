@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -18,7 +19,7 @@ export const styles = StyleSheet.create({
   fieldText: {
     color: colors.text.primary,
     fontFamily: fontFamily.bold,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
   placeholder: { color: colors.text.secondary + "80" },
 
@@ -32,6 +33,6 @@ export const styles = StyleSheet.create({
   confirmText: {
     color: colors.white,
     fontFamily: fontFamily.semibold,
-    fontSize: 16,
+    fontSize: textSize.bodyLarge,
   },
 });

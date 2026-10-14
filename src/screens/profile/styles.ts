@@ -68,7 +68,7 @@ export const styles = StyleSheet.create({
   semesterText: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 12,
+    fontSize: textSize.caption,
     letterSpacing: 0.5,
   },
   settings: {
@@ -87,7 +87,7 @@ export const styles = StyleSheet.create({
   settingsText: {
     color: colors.white,
     fontFamily: fontFamily.regular,
-    fontSize: 16,
+    fontSize: textSize.bodyLarge,
   },
 
   stats: { gap: 12 },

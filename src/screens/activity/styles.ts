@@ -4,24 +4,6 @@ import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  // Cabeçalho, título e subtítulo: margem lateral do Figma.
-  top: {
-    paddingHorizontal: 20,
-  },
-  title: {
-    color: colors.text.primary,
-    fontFamily: fontFamily.bold,
-    fontSize: textSize.title,
-    marginTop: 16,
-  },
-  subtitle: {
-    color: colors.text.secondary,
-    fontFamily: fontFamily.regular,
-    fontSize: 14,
-    lineHeight: 20,
-    marginTop: 8,
-  },
-
   // Filtros: a margem lateral fica no conteúdo para a rolagem horizontal chegar à borda.
   filters: {
     flexGrow: 0,
@@ -41,7 +23,7 @@ export const styles = StyleSheet.create({
   empty: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
     textAlign: "center",
     paddingVertical: 24,
   },

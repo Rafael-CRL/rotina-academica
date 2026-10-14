@@ -1,6 +1,7 @@
 import { colors } from "@/styles/colors";
 import { shadows } from "@/styles/shadows";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -39,14 +40,14 @@ export const styles = StyleSheet.create({
   label: {
     color: colors.text.secondary,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
     letterSpacing: 0.6,
     textTransform: "uppercase",
   },
   value: {
     color: colors.text.primary,
     fontFamily: fontFamily.bold,
-    fontSize: 28,
+    fontSize: textSize.title,
     lineHeight: 32,
   },
 });

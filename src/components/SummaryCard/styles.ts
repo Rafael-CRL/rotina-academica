@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   },
   total: {
     fontFamily: fontFamily.bold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
 
   title: {

@@ -1,5 +1,5 @@
 import { DisciplineCard } from "@/components/DisciplineCard";
-import { Header } from "@/components/Header";
+import { PageHeader } from "@/components/PageHeader";
 import { Screen } from "@/components/Screen";
 import { useActivities } from "@/contexts/ActivitiesContext";
 import { disciplines } from "@/data/disciplines";
@@ -22,9 +22,7 @@ export default function Discipline() {
 
   return (
     <Screen>
-      <View style={styles.top}>
-        <Header />
-        <Text style={styles.title}>Minhas Disciplinas</Text>
+      <PageHeader title="Minhas Disciplinas">
         <View style={styles.search}>
           <View style={styles.searchIcon}>
             <Ionicons name="search" size={20} color={colors.text.secondary} />
@@ -37,7 +35,7 @@ export default function Discipline() {
             style={styles.searchInput}
           />
         </View>
-      </View>
+      </PageHeader>
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}

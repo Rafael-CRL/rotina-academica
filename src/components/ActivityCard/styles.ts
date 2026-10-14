@@ -1,6 +1,7 @@
 import { colors } from "@/styles/colors";
 import { shadows } from "@/styles/shadows";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -32,36 +33,23 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  badge: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 999,
-  },
-  badgeText: {
-    fontFamily: fontFamily.medium,
-    fontSize: 12,
-  },
-
   date: {
     color: colors.text.secondary,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
 
   body: { gap: 4 },
   title: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
   titleDone: { textDecorationLine: "line-through" },
   description: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
     lineHeight: 20,
   },
 
@@ -83,16 +71,16 @@ export const styles = StyleSheet.create({
   disciplineName: {
     color: colors.text.secondary,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
   details: {
     color: colors.primary,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
   delivered: {
     color: colors.green,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
 });

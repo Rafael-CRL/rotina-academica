@@ -40,7 +40,7 @@ export default function Home() {
               title="Pendências"
               subtitle="Para esta semana"
               textColor={colors.orange}
-              accentColor="#FFDBCD"
+              accentColor={colors.badge.orange.background}
               icon={
                 <MaterialCommunityIcons
                   name="clipboard-alert"
@@ -56,7 +56,7 @@ export default function Home() {
                   title="Provas"
                   subtitle="Próximos 15 dias"
                   textColor={colors.red}
-                  accentColor="#FFDAD6"
+                  accentColor={colors.badge.red.background}
                   icon={
                     <FontAwesome6 name="clipboard-list" size={20} color={colors.red} />
                   }

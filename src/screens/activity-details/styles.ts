@@ -45,13 +45,13 @@ export const styles = StyleSheet.create({
   tipTitle: {
     color: colors.onInfo,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
   tipText: {
     color: colors.onInfo,
     opacity: 0.9,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
     lineHeight: 20,
   },
 
@@ -73,12 +73,12 @@ export const styles = StyleSheet.create({
   descriptionTitle: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
   paragraph: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 16,
+    fontSize: textSize.bodyLarge,
     lineHeight: 24,
   },
 
@@ -93,7 +93,7 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 20,
     borderTopWidth: 1,
     borderTopColor: colors.divider,
-    backgroundColor: withOpacity("#FFFFFF", 0.95),
+    backgroundColor: withOpacity(colors.white, 0.95),
   },
 
   notFound: {
@@ -105,7 +105,7 @@ export const styles = StyleSheet.create({
   notFoundText: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 16,
+    fontSize: textSize.bodyLarge,
     textAlign: "center",
   },
 });

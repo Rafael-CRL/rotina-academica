@@ -1,6 +1,7 @@
 import { colors } from "@/styles/colors";
 import { shadows } from "@/styles/shadows";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -24,7 +25,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
   rows: { gap: 8 },
   row: {
@@ -35,6 +36,6 @@ export const styles = StyleSheet.create({
   rowText: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 });

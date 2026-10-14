@@ -1,7 +1,7 @@
 import { ActivityCard } from "@/components/ActivityCard";
 import { FilterChip } from "@/components/FilterChip";
-import { Header } from "@/components/Header";
 import { NewActivityCard } from "@/components/NewActivityCard";
+import { PageHeader } from "@/components/PageHeader";
 import { Screen } from "@/components/Screen";
 import { useActivities } from "@/contexts/ActivitiesContext";
 import { getDiscipline } from "@/data/disciplines";
@@ -33,13 +33,10 @@ export default function Activities() {
 
   return (
     <Screen>
-      <View style={styles.top}>
-        <Header />
-        <Text style={styles.title}>Atividades e Prazos</Text>
-        <Text style={styles.subtitle}>
-          Acompanhe suas entregas e mantenha sua rotina em dia.
-        </Text>
-      </View>
+      <PageHeader
+        title="Atividades e Prazos"
+        subtitle="Acompanhe suas entregas e mantenha sua rotina em dia."
+      />
 
       <ScrollView
         horizontal

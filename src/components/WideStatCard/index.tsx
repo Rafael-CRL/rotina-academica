@@ -14,7 +14,12 @@ type WideStatCardProps = {
 export function WideStatCard({ label, value, onPress }: WideStatCardProps) {
   return (
     <Pressable style={styles.container} onPress={onPress}>
-      <View style={[styles.accent, { backgroundColor: withOpacity("#DBE1FF", 0.2) }]} />
+      <View
+        style={[
+          styles.accent,
+          { backgroundColor: withOpacity(colors.badge.blue.background, 0.2) },
+        ]}
+      />
       <View style={styles.content}>
         <View style={styles.iconCircle}>
           <Ionicons name="book" size={24} color={colors.white} />

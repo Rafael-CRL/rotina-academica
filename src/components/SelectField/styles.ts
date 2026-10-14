@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -20,7 +21,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     color: colors.text.primary,
     fontFamily: fontFamily.bold,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 
   option: {
@@ -34,7 +35,7 @@ export const styles = StyleSheet.create({
   optionText: {
     color: colors.text.primary,
     fontFamily: fontFamily.regular,
-    fontSize: 16,
+    fontSize: textSize.bodyLarge,
   },
   optionSelected: {
     color: colors.primary,

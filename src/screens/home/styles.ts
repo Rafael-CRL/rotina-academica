@@ -41,12 +41,12 @@ export const styles = StyleSheet.create({
   sectionTitle: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
-    fontSize: 18,
+    fontSize: textSize.heading,
   },
   link: {
     color: colors.primary,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
     letterSpacing: 0.5,
   },
   list: { gap: 12 },
@@ -54,6 +54,6 @@ export const styles = StyleSheet.create({
   empty: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 });

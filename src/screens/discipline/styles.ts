@@ -4,20 +4,6 @@ import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  // Cabeçalho, título e busca: margem lateral do Figma e espaço até a lista.
-  top: {
-    paddingHorizontal: 20,
-    paddingBottom: 24,
-  },
-
-  title: {
-    color: colors.text.primary,
-    fontFamily: fontFamily.semibold,
-    fontSize: textSize.title,
-    marginTop: 16,
-    marginBottom: 12,
-  },
-
   // Busca: caixa do ícone e campo de texto lado a lado, com 48 de altura.
   search: {
     flexDirection: "row",
@@ -44,7 +30,7 @@ export const styles = StyleSheet.create({
     borderBottomRightRadius: 8,
     color: colors.text.primary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
   },
 
   // Área interna da lista: espaço entre os cartões e margens.
@@ -57,7 +43,7 @@ export const styles = StyleSheet.create({
   empty: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    fontSize: 14,
+    fontSize: textSize.body,
     textAlign: "center",
     paddingVertical: 24,
   },

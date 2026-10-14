@@ -1,3 +1,4 @@
+import { Badge } from "@/components/Badge";
 import { DisciplineIcon } from "@/components/DisciplineIcon";
 import { colors } from "@/styles/colors";
 import { Activity } from "@/types/activity";
@@ -35,16 +36,12 @@ export function ActivityCard({ activity, discipline, onPress }: ActivityCardProp
       <View style={[styles.stripe, { backgroundColor: palette.stripe }]} />
 
       <View style={styles.header}>
-        <View style={[styles.badge, { backgroundColor: palette.badge }]}>
-          <Ionicons
-            name={statusConfig[status].icon}
-            size={14}
-            color={palette.badgeText}
-          />
-          <Text style={[styles.badgeText, { color: palette.badgeText }]}>
-            {statusConfig[status].label}
-          </Text>
-        </View>
+        <Badge
+          label={statusConfig[status].label}
+          icon={statusConfig[status].icon}
+          background={palette.badge}
+          color={palette.badgeText}
+        />
         <Text style={styles.date}>{formatDueDate(activity)}</Text>
       </View>
 

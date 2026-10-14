@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -7,7 +8,7 @@ export const styles = StyleSheet.create({
   label: {
     color: colors.text.primary,
     fontFamily: fontFamily.bold,
-    fontSize: 12,
+    fontSize: textSize.caption,
     letterSpacing: 0.5,
   },
   hint: {
@@ -17,6 +18,6 @@ export const styles = StyleSheet.create({
   error: {
     color: colors.red,
     fontFamily: fontFamily.medium,
-    fontSize: 12,
+    fontSize: textSize.caption,
   },
 });

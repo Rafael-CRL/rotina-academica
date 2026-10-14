@@ -1,3 +1,4 @@
+import { Badge } from "@/components/Badge";
 import { colors } from "@/styles/colors";
 import { Discipline } from "@/types/discipline";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
@@ -48,16 +49,11 @@ export function DisciplineCard({ discipline, pendingCount }: DisciplineCardProps
           </View>
         </View>
 
-        <View style={[styles.badge, isDone ? styles.badgeDone : styles.badgePending]}>
-          <Text
-            style={[
-              styles.badgeText,
-              isDone ? styles.badgeTextDone : styles.badgeTextPending,
-            ]}
-          >
-            {badgeLabel}
-          </Text>
-        </View>
+        <Badge
+          label={badgeLabel}
+          background={isDone ? colors.background.green : colors.background.red}
+          color={isDone ? colors.green : colors.red}
+        />
       </View>
 
       <View style={styles.divider} />

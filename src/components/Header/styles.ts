@@ -1,5 +1,6 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
+import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -26,7 +27,7 @@ export const styles = StyleSheet.create({
   title: {
     color: colors.primary,
     fontFamily: fontFamily.bold,
-    fontSize: 22,
+    fontSize: textSize.label,
     lineHeight: 28,
   },
 
