@@ -7,7 +7,7 @@ export const disciplines: Discipline[] = [
     prof: "Prof. Roberto Silva",
     schedule: "Seg / Qua - 10:00",
     room: "Laboratório 401",
-    pendingCount: 2,
+    icon: "database",
   },
   {
     id: "2",
@@ -15,7 +15,7 @@ export const disciplines: Discipline[] = [
     prof: "Prof. Maria Costa",
     schedule: "Ter / Qui - 08:00",
     room: "Sala 205",
-    pendingCount: 1,
+    icon: "calculator",
   },
   {
     id: "3",
@@ -23,7 +23,7 @@ export const disciplines: Discipline[] = [
     prof: "Prof. Carlos Lima",
     schedule: "Sex - 14:00",
     room: "Auditorio 112",
-    pendingCount: 0,
+    icon: "brain",
   },
   {
     id: "4",
@@ -31,6 +31,9 @@ export const disciplines: Discipline[] = [
     prof: "Prof. Ana Santos",
     schedule: "Seg / Qua - 14:00",
     room: "Laboratório 3",
-    pendingCount: 3,
+    icon: "code",
   },
 ];
+
+export const getDiscipline = (id: string) =>
+  disciplines.find((discipline) => discipline.id === id);
