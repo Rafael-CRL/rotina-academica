@@ -1,48 +1,59 @@
 import { colors } from "@/styles/colors";
 import { fontFamily } from "@/styles/fontFamily";
 import { textSize } from "@/styles/textSize";
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  container: {
-    backgroundColor: colors.background.primary,
-    flex: 1,
+  content: {
+    gap: 16,
+    paddingHorizontal: 20,
+    paddingBottom: 32,
   },
-  label: {
-    fontSize: textSize.label,
-    fontFamily: fontFamily.semibold,
-    color: colors.primary,
-  },
+  main: { gap: 32 },
 
+  greeting: { gap: 4 },
   title: {
-    fontSize: textSize.title,
-    fontFamily: fontFamily.semibold,
     color: colors.text.primary,
+    fontFamily: fontFamily.bold,
+    fontSize: textSize.title,
+    lineHeight: 36,
   },
-
   subtitle: {
-    fontSize: textSize.subtitle,
+    color: colors.text.secondary,
     fontFamily: fontFamily.regular,
-    color: colors.secondary,
+    fontSize: textSize.subtitle,
   },
 
-  cardContent: {
+  // Cartões de resumo: um de largura total e dois lado a lado.
+  summary: { gap: 16 },
+  summaryRow: {
     flexDirection: "row",
     gap: 16,
-    paddingTop: 24,
   },
+  summaryItem: { flex: 1 },
 
-  card: {
-    flex: 1,
+  section: { gap: 12 },
+  sectionHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-
-  content: {
-    paddingTop: Platform.OS === "android" ? 54 : 64,
-    paddingHorizontal: 24,
+  sectionTitle: {
+    color: colors.text.primary,
+    fontFamily: fontFamily.semibold,
+    fontSize: 18,
   },
-
-  titleContent: {
-    paddingTop: 28,
-    marginBottom: 32,
+  link: {
+    color: colors.primary,
+    fontFamily: fontFamily.medium,
+    fontSize: 12,
+    letterSpacing: 0.5,
+  },
+  list: { gap: 12 },
+  disciplineList: { gap: 16 },
+  empty: {
+    color: colors.text.secondary,
+    fontFamily: fontFamily.regular,
+    fontSize: 14,
   },
 });

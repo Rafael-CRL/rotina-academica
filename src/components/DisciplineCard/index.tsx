@@ -6,6 +6,7 @@ import { styles } from "./styles";
 
 type DisciplineCardProps = {
   discipline: Discipline;
+  pendingCount: number;
 };
 
 type InfoItemProps = {
@@ -29,12 +30,12 @@ function InfoItem({ icon, label, value }: InfoItemProps) {
   );
 }
 
-export function DisciplineCard({ discipline }: DisciplineCardProps) {
-  const isDone = discipline.pendingCount === 0;
+export function DisciplineCard({ discipline, pendingCount }: DisciplineCardProps) {
+  const isDone = pendingCount === 0;
 
   const badgeLabel = isDone
     ? "Em dia"
-    : `${discipline.pendingCount} ${discipline.pendingCount === 1 ? "Pendente" : "Pendentes"}`;
+    : `${pendingCount} ${pendingCount === 1 ? "Pendente" : "Pendentes"}`;
 
   return (
     <View style={[styles.container, isDone ? styles.stripeDone : styles.stripePending]}>

@@ -1,6 +1,7 @@
+import { withOpacity } from "@/utils/color";
+import { ReactNode } from "react";
 import { Text, View } from "react-native";
 import { styles } from "./styles";
-import { ReactNode } from "react";
 
 type SummaryCardProps = {
   total: number;
@@ -8,6 +9,9 @@ type SummaryCardProps = {
   subtitle: string;
   icon: ReactNode;
   textColor: string;
+  // Cor do detalhe curvo no canto superior direito.
+  accentColor: string;
+  accentOpacity?: number;
 };
 
 export function SummaryCard({
@@ -16,25 +20,24 @@ export function SummaryCard({
   subtitle,
   icon,
   textColor,
+  accentColor,
+  accentOpacity = 0.2,
 }: SummaryCardProps) {
   return (
     <View style={styles.container}>
+      <View
+        style={[
+          styles.accent,
+          { backgroundColor: withOpacity(accentColor, accentOpacity) },
+        ]}
+      />
       <View style={styles.row}>
         {icon}
-        <Text
-          style={[
-            styles.textRow,
-            {
-              color: textColor,
-            },
-          ]}
-        >
-          {total}
-        </Text>
+        <Text style={[styles.total, { color: textColor }]}>{total}</Text>
       </View>
-      <View style={styles.content}>
-        <Text style={styles.titleContent}>{title}</Text>
-        <Text style={styles.subtitleContent}>{subtitle}</Text>
+      <View>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
     </View>
   );

@@ -1,15 +1,28 @@
 import { colors } from "@/styles/colors";
+import { shadows } from "@/styles/shadows";
 import { fontFamily } from "@/styles/fontFamily";
 import { textSize } from "@/styles/textSize";
-import { Platform, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+  // `overflow: hidden` corta o detalhe curvo nos cantos arredondados do cartão.
   container: {
-    backgroundColor: colors.white,
-    paddingVertical: 24,
-    paddingStart: 24,
-    paddingEnd: 16,
+    minHeight: 128,
+    justifyContent: "space-between",
+    padding: 24,
     borderRadius: 12,
+    backgroundColor: colors.white,
+    overflow: "hidden",
+    ...shadows.card,
+  },
+
+  accent: {
+    position: "absolute",
+    top: -16,
+    right: -16,
+    width: 96,
+    height: 96,
+    borderBottomLeftRadius: 96,
   },
 
   row: {
@@ -17,26 +30,19 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     gap: 8,
   },
-
-  textRow: {
-    fontFamily: fontFamily.semibold,
-    fontSize: textSize.label,
-    marginTop: Platform.OS === "android" ? -3 : -1,
+  total: {
+    fontFamily: fontFamily.bold,
+    fontSize: 18,
   },
 
-  content: {
-    paddingTop: 12,
-  },
-
-  titleContent: {
+  title: {
     color: colors.text.primary,
     fontFamily: fontFamily.semibold,
     fontSize: textSize.dashboard.title,
   },
-
-  subtitleContent: {
+  subtitle: {
     color: colors.text.secondary,
-    fontFamily: fontFamily.light,
+    fontFamily: fontFamily.regular,
     fontSize: textSize.dashboard.subtitle,
   },
 });

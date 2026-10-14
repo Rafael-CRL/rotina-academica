@@ -4,12 +4,6 @@ import { textSize } from "@/styles/textSize";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  // Tela inteira. O `paddingTop` (área da barra de status) é somado na própria tela.
-  container: {
-    flex: 1,
-    backgroundColor: colors.background.primary,
-  },
-
   // Cabeçalho, título e busca: margem lateral do Figma e espaço até a lista.
   top: {
     paddingHorizontal: 20,
@@ -58,5 +52,13 @@ export const styles = StyleSheet.create({
     gap: 16,
     paddingHorizontal: 20,
     paddingBottom: 24,
+  },
+
+  empty: {
+    color: colors.text.secondary,
+    fontFamily: fontFamily.regular,
+    fontSize: 14,
+    textAlign: "center",
+    paddingVertical: 24,
   },
 });

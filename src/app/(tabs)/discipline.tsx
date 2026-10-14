@@ -1,15 +1,17 @@
 import { DisciplineCard } from "@/components/DisciplineCard";
 import { Header } from "@/components/Header";
+import { Screen } from "@/components/Screen";
+import { useActivities } from "@/contexts/ActivitiesContext";
 import { disciplines } from "@/data/disciplines";
 import { styles } from "@/screens/discipline/styles";
 import { colors } from "@/styles/colors";
+import { countPendingByDiscipline } from "@/utils/activity";
 import { Ionicons } from "@expo/vector-icons";
 import { useState } from "react";
 import { FlatList, Text, TextInput, View } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Discipline() {
-  const insets = useSafeAreaInsets();
+  const { activities } = useActivities();
   const [search, setSearch] = useState("");
 
   const filtered = disciplines.filter((discipline) =>
@@ -19,7 +21,7 @@ export default function Discipline() {
   );
 
   return (
-    <View style={[styles.container, { paddingTop: insets.top - 5 }]}>
+    <Screen>
       <View style={styles.top}>
         <Header />
         <Text style={styles.title}>Minhas Disciplinas</Text>
@@ -39,9 +41,17 @@ export default function Discipline() {
       <FlatList
         data={filtered}
         keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <DisciplineCard discipline={item} />}
+        renderItem={({ item }) => (
+          <DisciplineCard
+            discipline={item}
+            pendingCount={countPendingByDiscipline(activities, item.id)}
+          />
+        )}
+        ListEmptyComponent={
+          <Text style={styles.empty}>Nenhuma disciplina encontrada.</Text>
+        }
         contentContainerStyle={styles.list}
       />
-    </View>
+    </Screen>
   );
 }
