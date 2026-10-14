@@ -1,14 +1,27 @@
-import { Stack } from "expo-router";
+import { LoadingScreen } from "@/components/LoadingScreen";
+import { ActivitiesProvider, useActivities } from "@/contexts/ActivitiesContext";
 import {
-  useFonts,
   Manrope_300Light,
   Manrope_400Regular,
   Manrope_500Medium,
   Manrope_600SemiBold,
   Manrope_700Bold,
+  useFonts,
 } from "@expo-google-fonts/manrope";
-import { View } from "react-native";
-import { Loading } from "@/components/Loading";
+import { Stack } from "expo-router";
+
+// Espera as atividades serem lidas do aparelho antes de mostrar as telas.
+function AppStack() {
+  const { isLoading } = useActivities();
+
+  if (isLoading) return <LoadingScreen />;
+
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" />
+    </Stack>
+  );
+}
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -19,21 +32,11 @@ export default function RootLayout() {
     Manrope_700Bold,
   });
 
-  if (!fontsLoaded) {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Loading />
-      </View>
-    );
-  }
+  if (!fontsLoaded) return <LoadingScreen />;
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="index" />
-    </Stack>
+    <ActivitiesProvider>
+      <AppStack />
+    </ActivitiesProvider>
   );
 }
