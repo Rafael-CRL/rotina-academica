@@ -45,6 +45,13 @@ export const styles = StyleSheet.create({
   badgeTextPending: { color: colors.red },
   badgeTextDone: { color: colors.green },
 
+  // Ícone de pessoa e nome do professor lado a lado.
+  profRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+
   prof: {
     color: colors.text.secondary,
     fontFamily: fontFamily.regular,

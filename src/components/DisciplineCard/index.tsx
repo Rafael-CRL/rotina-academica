@@ -1,6 +1,6 @@
 import { colors } from "@/styles/colors";
 import { Discipline } from "@/types/discipline";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { Text, View } from "react-native";
 import { styles } from "./styles";
 
@@ -41,7 +41,10 @@ export function DisciplineCard({ discipline }: DisciplineCardProps) {
       <View style={styles.header}>
         <View style={styles.titleBox}>
           <Text style={styles.name}>{discipline.name}</Text>
-          <Text style={styles.prof}>{discipline.prof}</Text>
+          <View style={styles.profRow}>
+            <Ionicons name="person-outline" size={14} color={colors.text.secondary} />
+            <Text style={styles.prof}>{discipline.prof}</Text>
+          </View>
         </View>
 
         <View style={[styles.badge, isDone ? styles.badgeDone : styles.badgePending]}>
