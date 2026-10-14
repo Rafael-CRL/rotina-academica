@@ -1,7 +1,6 @@
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { ActivitiesProvider, useActivities } from "@/contexts/ActivitiesContext";
 import {
-  Manrope_300Light,
   Manrope_400Regular,
   Manrope_500Medium,
   Manrope_600SemiBold,
@@ -25,7 +24,6 @@ function AppStack() {
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
-    Manrope_300Light,
     Manrope_400Regular,
     Manrope_500Medium,
     Manrope_600SemiBold,

@@ -16,7 +16,7 @@ const MONTHS = [
 
 export const pad = (value: number) => String(value).padStart(2, "0");
 
-export const startOfDay = (date: Date) =>
+const startOfDay = (date: Date) =>
   new Date(date.getFullYear(), date.getMonth(), date.getDate());
 
 // Dias de calendário de `from` até `to` (0 = mesmo dia, 1 = dia seguinte, -1 = dia anterior).

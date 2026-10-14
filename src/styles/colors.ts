@@ -9,8 +9,6 @@ export const colors = {
   text: {
     primary: "#191B23",
     secondary: "#434655",
-    green: "#007432",
-    orange: "#7D2D00",
   },
   background: {
     primary: "#faf8ff",
